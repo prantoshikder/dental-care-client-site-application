@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 
 interface Testimonial {
@@ -16,10 +16,22 @@ interface TestimonialSliderProps {
   testimonials: Testimonial[];
 }
 
-export default function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
+export default function TestimonialSlider({
+  testimonials,
+}: TestimonialSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
   const [isPaused, setIsPaused] = useState(false);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1 >= testimonials.length ? 0 : prev + 1));
+  }, [testimonials.length]);
+
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prev) =>
+      prev - 1 < 0 ? testimonials.length - 1 : prev - 1
+    );
+  }, [testimonials.length]);
 
   // Adjust visible items based on screen size
   useEffect(() => {
@@ -47,15 +59,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
-  }, [currentIndex, isPaused]);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1 >= testimonials.length ? 0 : prev + 1));
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 < 0 ? testimonials.length - 1 : prev - 1));
-  };
+  }, [isPaused, nextSlide]);
 
   // Get visible testimonials with wrap-around
   const getVisibleTestimonials = () => {
@@ -67,13 +71,13 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
   };
 
   return (
-    <div 
+    <div
       className="relative group px-12"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="overflow-hidden">
-        <div className="flex gap-8 transition-all duration-500 ease-in-out items-stretch min-h-[320px]">
+        <div className="flex gap-8 transition-all duration-500 ease-in-out items-stretch min-h-80">
           <AnimatePresence mode="popLayout" initial={false}>
             {getVisibleTestimonials().map((testimonial, index) => (
               <motion.div

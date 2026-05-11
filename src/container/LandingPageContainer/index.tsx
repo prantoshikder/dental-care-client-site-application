@@ -1,7 +1,6 @@
+import TestimonialSlider from "@/components/TestimonialSlider";
 import SectionHeader from "@/src/components/SectionHeader";
 import ServiceCard from "@/src/components/ServiceCard";
-import TestimonialCard from "@/components/TestimonialCard";
-import TestimonialSlider from "@/components/TestimonialSlider";
 import {
   ArrowRight,
   Clock,
@@ -47,33 +46,38 @@ export default function LandingPageContainer() {
     {
       name: "Sarah Williams",
       role: "Patient",
-      content: "The best dental experience I've ever had. The staff is professional and the treatment was painless. Highly recommended!",
-      rating: 5
+      content:
+        "The best dental experience I've ever had. The staff is professional and the treatment was painless. Highly recommended!",
+      rating: 5,
     },
     {
       name: "James Miller",
       role: "Patient",
-      content: "I was nervous about my root canal, but Dr. Johnson made me feel at ease. The technology they use is truly impressive.",
-      rating: 5
+      content:
+        "I was nervous about my root canal, but Dr. Johnson made me feel at ease. The technology they use is truly impressive.",
+      rating: 5,
     },
     {
       name: "Emily Davis",
       role: "Patient",
-      content: "My teeth whitening results are incredible! I finally have the confidence to smile in photos again. Thank you SmileCare!",
-      rating: 5
+      content:
+        "My teeth whitening results are incredible! I finally have the confidence to smile in photos again. Thank you SmileCare!",
+      rating: 5,
     },
     {
       name: "Michael Brown",
       role: "Patient",
-      content: "Exceptional service! The dental implants look and feel completely natural. It has changed my life.",
-      rating: 5
+      content:
+        "Exceptional service! The dental implants look and feel completely natural. It has changed my life.",
+      rating: 5,
     },
     {
       name: "Linda Wilson",
       role: "Patient",
-      content: "The pediatric care here is amazing. My kids actually look forward to their dental appointments now!",
-      rating: 5
-    }
+      content:
+        "The pediatric care here is amazing. My kids actually look forward to their dental appointments now!",
+      rating: 5,
+    },
   ];
 
   return (
@@ -136,7 +140,7 @@ export default function LandingPageContainer() {
           <div className="relative">
             <div className="aspect-square bg-gray-200 rounded-3xl overflow-hidden shadow-2xl relative">
               {/* Placeholder for Hero Image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-sky-200 to-sky-400 flex items-center justify-center">
+              <div className="absolute inset-0 bg-linear-to-br from-sky-200 to-sky-400 flex items-center justify-center">
                 <div className="text-white text-center p-8">
                   <p className="text-4xl font-bold mb-4 italic">
                     Friendly Care for All Ages
@@ -260,7 +264,7 @@ export default function LandingPageContainer() {
 
       {/* CTA Section */}
       <section className="py-20 bg-sky-600 text-white overflow-hidden relative">
-        <div className="absolute inset-0 bg-sky-500/20 translate-x-1/2 rounded-full -z-0"></div>
+        <div className="absolute inset-0 bg-sky-500/20 translate-x-1/2 rounded-full z-0"></div>
         <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 italic">
             Ready to transform your smile?
