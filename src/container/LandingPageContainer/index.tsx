@@ -1,6 +1,6 @@
-import Testimonial from "@/components/ui/Testimonial";
 import SectionHeader from "@/src/components/SectionHeader";
 import ServiceCard from "@/src/components/ServiceCard";
+import Testimonial from "@/src/components/ui/Testimonial";
 import {
   ArrowRight,
   Clock,

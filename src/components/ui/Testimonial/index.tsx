@@ -1,5 +1,5 @@
-import TestimonialSlider from "@/components/ui/Testimonial/TestimonialSlider";
 import SectionHeader from "@/src/components/SectionHeader";
+import TestimonialSlider from "@/src/components/ui/Testimonial/TestimonialSlider";
 
 const testimonials = [
   {
