@@ -23,10 +23,12 @@ export default function TestimonialCard({
       <p className="text-gray-600 italic mb-6 leading-relaxed grow">
         &quot;{content}&quot;
       </p>
+
       <div className="flex items-center gap-4 mt-auto shrink-0">
         <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 font-bold">
           {name.charAt(0)}
         </div>
+
         <div>
           <h4 className="font-bold text-gray-900">{name}</h4>
           <p className="text-sm text-gray-500">{role}</p>

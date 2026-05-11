@@ -21,7 +21,7 @@ export default function TestimonialSlider({
 }: TestimonialSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setPaused] = useState(false);
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1 >= testimonials.length ? 0 : prev + 1));
@@ -73,8 +73,8 @@ export default function TestimonialSlider({
   return (
     <div
       className="relative group px-12"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
     >
       <div className="overflow-hidden">
         <div className="flex gap-8 transition-all duration-500 ease-in-out items-stretch min-h-80">
