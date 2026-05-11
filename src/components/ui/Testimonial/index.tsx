@@ -1,4 +1,4 @@
-import SectionHeader from "@/src/components/SectionHeader";
+import SectionHeader from "@/src/components/shared/SectionHeader";
 import TestimonialSlider from "@/src/components/ui/Testimonial/TestimonialSlider";
 
 const testimonials = [
@@ -20,9 +20,10 @@ const testimonials = [
     name: "Emily Davis",
     role: "Patient",
     content:
-      "My teeth whitening results are incredible! I finally have the confidence to smile in photos again. Thank you SmileCare!",
+      "My teeth whitening results are incredible! I finally have the confidence to smile in photos again. Thank you DentalCare!",
     rating: 5,
   },
+
   {
     name: "Michael Brown",
     role: "Patient",

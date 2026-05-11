@@ -15,9 +15,9 @@ export default function Footer() {
         <div className="space-y-4">
           <Link href="/" className="flex items-center gap-2 text-white">
             <div className="w-8 h-8 bg-sky-600 rounded flex items-center justify-center text-white font-bold text-lg">
-              S
+              D
             </div>
-            <span className="text-xl font-bold tracking-tight">SmileCare</span>
+            <span className="text-xl font-bold tracking-tight">DentalCare</span>
           </Link>
           <p className="text-sm leading-relaxed">
             Providing high-quality dental care with the latest technology and a
@@ -122,7 +122,7 @@ export default function Footer() {
             </li>
             <li className="flex gap-3">
               <Mail size={18} className="text-sky-500 shrink-0" />
-              <span>hello@smilecare.com</span>
+              <span>hello@dentalcare.com</span>
             </li>
           </ul>
         </div>
@@ -130,7 +130,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-gray-800 text-center text-xs">
         <p>
-          &copy; {new Date().getFullYear()} SmileCare Dental Clinic. All rights
+          &copy; {new Date().getFullYear()} DentalCare Dental Clinic. All rights
           reserved.
         </p>
       </div>

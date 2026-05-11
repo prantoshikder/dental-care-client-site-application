@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SmileCare | Professional Dental Clinic",
+  title: "DentalCare | Professional Dental Clinic",
   description:
-    "Experience the best dental care at SmileCare Clinic. Expert dentists, modern technology, and a patient-first approach.",
+    "Experience the best dental care at DentalCare Clinic. Expert dentists, modern technology, and a patient-first approach.",
 };
 
 export default function RootLayout({

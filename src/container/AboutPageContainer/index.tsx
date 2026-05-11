@@ -1,4 +1,4 @@
-import SectionHeader from "@/src/components/SectionHeader";
+import SectionHeader from "@/src/components/shared/SectionHeader";
 import {
   Award,
   CheckCircle,
@@ -77,7 +77,7 @@ export default function AboutPageContainer() {
               <div className="h-1.5 w-20 bg-sky-600 rounded-full"></div>
             </div>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Founded in 2008, SmileCare Clinic has grown from a small family
+              Founded in 2008, DentalCare Clinic has grown from a small family
               practice to a state-of-the-art dental facility. We&apos;ve stayed
               true to our roots: providing personalized, compassionate care to
               every member of your family.

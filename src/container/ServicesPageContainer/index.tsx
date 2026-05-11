@@ -1,4 +1,4 @@
-import ServiceCard from "@/src/components/ServiceCard";
+import ServiceCard from "@/src/components/ui/landing/Services/ServiceCard";
 import {
   ArrowRight,
   Baby,

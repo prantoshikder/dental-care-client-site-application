@@ -67,7 +67,7 @@ export default function ContactPageContainer() {
                       Email Us
                     </p>
                     <p className="text-xl font-bold text-gray-900">
-                      hello@smilecare.com
+                      hello@dentalcare.com
                     </p>
                   </div>
                 </div>
