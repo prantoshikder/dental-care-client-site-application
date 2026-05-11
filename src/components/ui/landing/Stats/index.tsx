@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Award, Calendar, Smile } from "lucide-react";
+import { Award, Calendar, Smile, Users } from "lucide-react";
 
 const stats = [
   {
@@ -46,9 +46,11 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex flex-col items-center text-center p-8 rounded-[2rem] border border-gray-50 hover:border-sky-100 hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-500 group"
+              className="flex flex-col items-center text-center p-8 rounded-4xl border border-gray-50 hover:border-sky-100 hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-500 group"
             >
-              <div className={`w-16 h-16 ${stat.bgColor} rounded-2xl flex items-center justify-center ${stat.color} mb-6 group-hover:scale-110 transition-transform duration-500`}>
+              <div
+                className={`w-16 h-16 ${stat.bgColor} rounded-2xl flex items-center justify-center ${stat.color} mb-6 group-hover:scale-110 transition-transform duration-500`}
+              >
                 <stat.icon size={32} />
               </div>
               <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-2">

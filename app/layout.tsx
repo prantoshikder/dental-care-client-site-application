@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} min-h-full flex flex-col font-sans`}
       >
         <Navbar />
-        <main className="grow">{children}</main>
+        <main className="grow pt-16 lg:pt-20">{children}</main>
         <Footer />
       </body>
     </html>
