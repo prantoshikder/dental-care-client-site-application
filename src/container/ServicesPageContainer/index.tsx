@@ -1,6 +1,6 @@
-import ServiceCard from "@/src/components/ui/landing/Services/ServiceCard";
+"use client";
+
 import {
-  ArrowRight,
   Baby,
   HeartPulse,
   Microscope,
@@ -10,124 +10,71 @@ import {
   Sparkles,
   Stethoscope,
 } from "lucide-react";
+import ServicesHero from "./components/ServicesHero";
+import ServicesList from "./components/ServicesList";
+import ServicesProcess from "./components/ServicesProcess";
+import ServicesFAQ from "./components/ServicesFAQ";
+import ServicesCTA from "./components/ServicesCTA";
 
 export default function ServicesPageContainer() {
   const allServices = [
     {
       title: "General Dentistry",
-      description:
-        "Comprehensive checkups, cleanings, and digital X-rays to maintain your oral health.",
+      description: "Comprehensive checkups, advanced cleanings, and digital diagnostics for lifelong oral health.",
       icon: Stethoscope,
+      image: "https://images.unsplash.com/photo-1629909608185-40fccde6a172?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "Cosmetic Dentistry",
-      description:
-        "Veneers, bonding, and contouring to give you the perfect smile you've always wanted.",
+      title: "Cosmetic Artistry",
+      description: "Custom veneers and smile contouring designed to enhance your natural facial aesthetics.",
       icon: Scissors,
+      image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=2070&auto=format&fit=crop"
     },
     {
       title: "Dental Implants",
-      description:
-        "State-of-the-art implant solutions to replace missing teeth with natural-looking results.",
+      description: "Titanium-reinforced restorations that provide the most stable and natural-looking tooth replacement.",
       icon: Shield,
+      image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "Emergency Services",
-      description:
-        "Same-day appointments for dental pain, accidents, and urgent dental needs.",
+      title: "Emergency Care",
+      description: "Immediate clinical intervention for acute pain, accidents, and urgent dental structural needs.",
       icon: HeartPulse,
+      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "Teeth Whitening",
-      description:
-        "Professional whitening treatments that can brighten your smile by several shades in one visit.",
+      title: "Digital Whitening",
+      description: "AI-monitored professional whitening that achieves dramatic results without increasing sensitivity.",
       icon: Sparkles,
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop"
     },
     {
       title: "Orthodontics",
-      description:
-        "Modern teeth straightening options including clear aligners and traditional braces.",
+      description: "Modern alignment solutions including clear aligners for a discreet and comfortable transformation.",
       icon: Smile,
+      image: "https://images.unsplash.com/photo-1513412323491-0d25665f842a?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "Pediatric Dentistry",
-      description:
-        "Gentle and fun dental care specifically designed for our younger patients.",
+      title: "Pediatric Care",
+      description: "Specialized, anxiety-free dental experiences designed to build positive health habits from childhood.",
       icon: Baby,
+      image: "https://images.unsplash.com/photo-1460662136044-6453965905d4?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      title: "Root Canal Therapy",
-      description:
-        "Pain-free root canal treatments to save damaged teeth and eliminate infection.",
+      title: "Micro-Endodontics",
+      description: "High-precision root canal therapy utilizing microscopic technology for absolute saving of damaged teeth.",
       icon: Microscope,
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop"
     },
   ];
 
   return (
-    <div className="pb-20">
-      {/* Services Hero */}
-      <section className="bg-sky-600 py-24 text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
-            Our Dental Services
-          </h1>
-          <p className="text-xl text-sky-100 max-w-3xl mx-auto leading-relaxed">
-            From routine checkups to advanced cosmetic procedures, we offer a
-            full range of dental services to keep your smile healthy and
-            beautiful.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {allServices.map((service, index) => (
-              <ServiceCard key={index} {...service} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-4">
-        <div className="bg-sky-50 rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12">
-          <div className="flex-1 space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Advanced Technology for Better Care
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              We invest in the latest dental technology to provide more accurate
-              diagnoses, more comfortable treatments, and faster recovery times
-              for our patients.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                "Digital 3D Imaging",
-                "Laser Dentistry",
-                "Intraoral Cameras",
-                "Pain-Free Anesthesia",
-              ].map((tech, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm border border-sky-100"
-                >
-                  <div className="w-8 h-8 bg-sky-600 rounded-lg flex items-center justify-center text-white shrink-0">
-                    <ArrowRight size={16} />
-                  </div>
-                  <span className="font-bold text-gray-800">{tech}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="w-full lg:w-1/3 aspect-square bg-sky-200 rounded-3xl overflow-hidden relative shadow-2xl">
-            <div className="absolute inset-0 bg-linear-to-br from-sky-600/40 to-transparent flex items-center justify-center p-8 text-center text-white">
-              <p className="text-2xl font-bold italic">
-                Precision. Comfort. Results.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="bg-white">
+      <ServicesHero />
+      <ServicesList services={allServices} />
+      <ServicesProcess />
+      <ServicesFAQ />
+      <ServicesCTA />
     </div>
   );
 }
